@@ -1,11 +1,10 @@
-import { useState } from 'react'
+import { Counter } from './components/Counter'
 
 function App() {
-  // eslint-disable-next-line no-unused-vars
-  const [count, setCount] = useState(0)
-
   return (
     <>
+      <img className='logo' src='https://wqpyl0zo4l.csb.app/logo.svg' alt='Redux Logo' />
+      <Counter />
     </>
   )
 }

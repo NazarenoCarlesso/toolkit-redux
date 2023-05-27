@@ -12,6 +12,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  font-family: 'Courier New', Courier, monospace;
 }
 
 a {
@@ -19,6 +21,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -29,6 +32,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  justify-content: center;
 }
 
 h1 {
@@ -46,10 +50,13 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin: 2px;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -60,10 +67,47 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
+  }
+}
+
+.counter {
+  font-size: 8rem;
+  font-weight: 500;
+  color: #7811ff;
+}
+
+.counter-title {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #d4b3ff;
+}
+
+.animate__animated.animate__pulse {
+  --animate-duration: 0.3s;
+  --animate-delay: 0s;
+}
+
+.logo {
+  animation: logo-float infinite 3s ease-in-out;
+}
+
+@keyframes logo-float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
   }
 }
