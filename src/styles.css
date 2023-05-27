@@ -16,6 +16,10 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
+#root {
+  display: flex;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
