@@ -18,6 +18,7 @@
 
 #root {
   display: flex;
+  align-items: center;
 }
 
 a {
@@ -136,4 +137,20 @@ button:focus-visible {
   align-items: center;
   height: 272px;
   color: #7811ff;
+}
+
+.completed {
+  list-style-type: square;
+  text-decoration: line-through;
+  color: #8a8a8a;
+}
+
+li {
+  white-space: nowrap;
+}
+
+hr {
+  border: 2px solid;
+  border-color: #7811ff;
+  border-radius: 5px;
 }
