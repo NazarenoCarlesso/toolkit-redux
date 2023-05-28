@@ -2,6 +2,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { getPokemons } from './slices/pokemon/thunks'
 import { useEffect } from 'react'
+import { PokemonList } from './components/PokemonList'
 
 export const PokemonApp = () => {
   const dispatch = useDispatch()
@@ -11,16 +12,19 @@ export const PokemonApp = () => {
 
   return (
     <div>
-      Pokemon App
-      <hr />
-      <span>
-        Loading: {isLoading ? 'true' : 'false'}
-      </span>
-      <ul>
+      <h3 className='pokemon-title'>
+        Pokemon App
+      </h3>
+      <div>
+        <img className='gengar' src='/gengar.png' alt='Gengar' />
+      </div>
+      <div>
         {
-          pokemons.map(pokemon => <li key={pokemon.name}>{pokemon.name}</li>)
+          isLoading
+            ? <span className='loading'>Loading... </span>
+            : <PokemonList pokemons={pokemons} />
         }
-      </ul>
+      </div>
       <button
         disabled={isLoading}
         onClick={() => dispatch(getPokemons(page - 1))}

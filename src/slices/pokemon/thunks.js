@@ -17,7 +17,7 @@ export const getPokemons = (page = 0) => {
       })))
     */
     // AXIOS
-    pokemonApi.get(`/pokemon?limit=18&offset=${page * 18}`)
+    pokemonApi.get(`/pokemon?limit=10&offset=${page * 10}`)
       .then(response => dispatch(setPokemons({
         page: page,
         pokemons: response.data.results,

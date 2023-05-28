@@ -115,3 +115,25 @@ button:focus-visible {
     transform: translateY(0px);
   }
 }
+
+.pokemon-title {
+  text-align: center;
+  color: #7811ff;
+  font-weight: 500;
+}
+
+.pokemon {
+  color: #d4b3ff;
+}
+
+.gengar {
+  width: 150px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 272px;
+  color: #7811ff;
+}
